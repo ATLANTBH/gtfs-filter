@@ -13,7 +13,7 @@ import java.util.zip.ZipOutputStream;
 public class ZipHelper {
 
 	/**
-	 * Unzip it
+	 * Unzip zipped file into provided folder
 	 * 
 	 * @param zipFile
 	 *            input zip file
@@ -53,7 +53,7 @@ public class ZipHelper {
 	}
 
 	/**
-	 * Zip it
+	 * Zip content from provided folder to one zip file with provided path
 	 * 
 	 * @param zipFile
 	 *            output ZIP file location

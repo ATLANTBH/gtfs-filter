@@ -50,7 +50,7 @@ public class CSVLoader {
 	public static final String ROUTE_TYPE = "route_type";
 
 	/**
-	 * Load file in Iterable<CSVRecord>
+	 * Load routes.txt in Iterable<CSVRecord>
 	 * 
 	 * @param fileName
 	 *            represents path to file in which are saved CSV records
@@ -65,7 +65,15 @@ public class CSVLoader {
 				ROUTE_LONG_NAME, ROUTE_TYPE).parse(reader);
 		return records;
 	}
-
+	/**
+	 * Load trips.txt in Iterable<CSVRecord>
+	 * 
+	 * @param fileName
+	 *            represents path to file in which are saved CSV records
+	 * @return instance of {@link Iterator}
+	 * @throws IOException
+	 *             if file can't be loaded or processed
+	 */
 	public static Iterable<CSVRecord> loadTripsRecords(String filePath) throws IOException {
 		Reader reader = new FileReader(filePath);
 		Iterable<CSVRecord> records = CSVFormat.DEFAULT.withHeader(
@@ -74,6 +82,15 @@ public class CSVLoader {
 		return records;
 	}
 
+	/**
+	 * Load stops.txt in Iterable<CSVRecord>
+	 * 
+	 * @param fileName
+	 *            represents path to file in which are saved CSV records
+	 * @return instance of {@link Iterator}
+	 * @throws IOException
+	 *             if file can't be loaded or processed
+	 */
 	public static Iterable<CSVRecord> loadStopsRecords(String filePath) throws IOException {
 		Reader reader = new FileReader(filePath);
 		Iterable<CSVRecord> records = CSVFormat.DEFAULT.withHeader(
@@ -81,6 +98,15 @@ public class CSVLoader {
 		return records;
 	}
 
+	/**
+	 * Load stop_times.txt in Iterable<CSVRecord>
+	 * 
+	 * @param fileName
+	 *            represents path to file in which are saved CSV records
+	 * @return instance of {@link Iterator}
+	 * @throws IOException
+	 *             if file can't be loaded or processed
+	 */
 	public static Iterable<CSVRecord> loadStopTimesRecords(String filePath) throws IOException {
 		Reader reader = new FileReader(filePath);
 		Iterable<CSVRecord> records = CSVFormat.DEFAULT.withHeader(
@@ -88,6 +114,15 @@ public class CSVLoader {
 		return records;
 	}
 
+	/**
+	 * Load shapes.txt in Iterable<CSVRecord>
+	 * 
+	 * @param fileName
+	 *            represents path to file in which are saved CSV records
+	 * @return instance of {@link Iterator}
+	 * @throws IOException
+	 *             if file can't be loaded or processed
+	 */
 	public static Iterable<CSVRecord> loadShapesRecords(String filePath) throws IOException {
 		Reader reader = new FileReader(filePath);
 		Iterable<CSVRecord> records = CSVFormat.DEFAULT.withHeader(
